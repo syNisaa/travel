@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css"; // Pastikan Bootstrap CSS diimpor
 // import React from "react";
 import React, { useState } from "react";
 import monas from "../assets/img/destinasi/monas.jpg";
-import "../css/destinations.css"; // Pastikan ini mengarah ke file CSS yang benar
+import "../css/flights.css"; // Pastikan ini mengarah ke file CSS yang benar
 
 const Flights = () => {
     const [priceRange, setPriceRange] = useState([0, 10000000]);
@@ -59,114 +59,107 @@ const Flights = () => {
                     <input type="date" className="form-control me-2" />
                     <input type="date" className="form-control me-2" />
                     <input type="text" placeholder="1 room, 2 adults, 0 children" className="form-control me-2" />
-                    <button class="btn btn-primary"></button>
+                    <button class="btn btn-primary">Search</button>
                 </div>
 
-                <div class="row">
-                    <div class="col-3 ">
-                        <div class="card">
-                            <div class="card-body">
-                                <h7><b> Popular Filter </b></h7><br />
-                                <div class="form-check mb-2 mt-3">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Mountain
+                <div className="row">
+
+                    <div className="col-md-3">
+
+                        <div className="filter-section">
+                            <div className="price">
+                                <p><b><center>Price (Rp 0 - Rp 10,000,000+)</center></b></p>
+                                <input type="range" min="0" max="10000000" step="50000" value={priceRange[1]} onChange={handlePriceChange} className="form-range" />
+                                <p><center>Up to: Rp {priceRange[1].toLocaleString()}</center></p>
+                                <div className="price-options">
+                                    <label>
+                                        <input type="button" className="btn btn-secondary mb-2" name="price" value="0-300000" onChange={handlePriceChange} />
+                                    </label>
+                                    <br />
+                                    <label>
+                                        <input type="button" className="btn btn-secondary mb-2" name="price" value="0-5000000" onChange={handlePriceChange} />
+                                    </label>
+                                    <br />
+                                    <label>
+                                        <input type="button" className="btn btn-secondary" name="price" value="0-10000000" onChange={handlePriceChange} />
                                     </label>
                                 </div>
-
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Ocean
-                                    </label>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-9 destinasi">
-                        <div class="card mb-3" >
-                            <div class="row g-0">
-                                <div class="col-md-3">
-                                    <img src={monas} class="img-fluid rounded-start" alt="Destinasi Wisata" />
-                                </div>
-                                <div class="col-md-9">
-                                    <div className="card-body ">
-                                        <h7><b> Monas (Monumen Nasional) </b></h7> <br />
-                                        <small><i class="fa-solid fa-location-dot"></i>Jakarta, Indonesia </small>
-                                        <p className="paragraf">The National Monument or what is abbreviated as Monas or Tugu Monas is a 132 meter (433 foot) high memorial monument located right in the middle of Medan Merdeka Square, Central Jakarta. Monas was established to commemorate the resistance and struggle of the Indonesian people in gaining independence from the colonial government of the Dutch Kingdom.<br />
-                                        </p>
-                                        <a href="/detailDestination" type="button" className="btn btn-outline-primary btn-sm">Explore</a>
-
-                                    </div>
-
-                                </div>
                             </div>
                         </div>
 
-                        <div class="card mb-3" >
-                            <div class="row g-0">
-                                <div class="col-md-3">
-                                    <img src={monas} class="img-fluid rounded-start" alt="Destinasi Wisata" />
-                                </div>
-                                <div class="col-md-9">
-                                    <div className="card-body ">
-                                        <h7><b> Taman Mini Indonesia Indah </b></h7> <br />
-                                        <small>Jakarta, Indonesia </small>
-                                        <p className="paragraf">Spanning over 250 acres, Taman Mini Indonesia Indah is a cultural park designed to represent the diversity of Indonesia. Each province is depicted with its traditional architecture, complete with intricate details. The park features numerous museums such as the Museum Indonesia, showcasing traditional costumes and crafts, and the Keong Emas IMAX theater, which screens educational films. The park also hosts various cultural performances and festivals, making it a vibrant, living museum.<br />
-                                        </p>
-                                        <a href="#" type="button" className="btn btn-outline-primary btn-sm">Explore</a>
+                        <div className="filter-section mt-2">
+                            <div className="facilities">
+                                <h4>All Airlines</h4>
+                                <label>
+                                    <input type="checkbox" name="facilities" value="wifi" onChange={handleFilterChange} /> Garuda Indonesia
+                                </label>
+                                <br />
+                                <label>
+                                    <input type="checkbox" name="facilities" value="pool" onChange={handleFilterChange} /> Citilink
+                                </label>
+                                <br />
+                                <label>
+                                    <input type="checkbox" name="facilities" value="parking" onChange={handleFilterChange} /> Lion Air
+                                </label>
+                                <br />
 
-                                    </div>
-
-                                </div>
                             </div>
-                        </div>
 
-                        <div class="card mb-3" >
-                            <div class="row g-0">
-                                <div class="col-md-3">
-                                    <img src={monas} class="img-fluid rounded-start" alt="Destinasi Wisata" />
-                                </div>
-                                <div class="col-md-9">
-                                    <div className="card-body ">
-                                        <h7><b> Kota Tua </b></h7> <br />
-                                        <small>Jakarta, Indonesia </small>
-                                        <p className="paragraf">Kota Tua, also known as Old Batavia, transports visitors back to Jakarta's colonial past. The area is rich with Dutch colonial buildings, some of which have been converted into museums. Fatahillah Square is the heart of Kota Tua, where you can visit the Jakarta History Museum, housed in the old city hall. The Wayang Museum displays traditional Indonesian puppetry, while Café Batavia offers a nostalgic dining experience with a view of the square.</p>
-                                        <a href="#" type="button" className="btn btn-outline-primary btn-sm">Explore</a>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-3" >
-                            <div class="row g-0">
-                                <div class="col-md-3">
-                                    <img src={monas} class="img-fluid rounded-start" alt="Destinasi Wisata" />
-                                </div>
-                                <div class="col-md-9">
-                                    <div className="card-body ">
-                                        <h7><b> Ancol Dreamland</b></h7> <br />
-                                        <small>Jakarta, Indonesia </small>
-                                        <p className="paragraf">Ancol Dreamland is Jakarta's premier recreational complex, located along the waterfront. It includes Dunia Fantasi, an amusement park with thrilling rides and attractions themed around various cultures. Sea World offers an impressive aquarium showcasing marine life, while Atlantis Water Adventure features pools and slides for all ages. The Ancol complex also includes art markets, an eco-park, and numerous dining options, making it a perfect family destination.<br />
-                                        </p>
-                                        <a href="#" type="button" className="btn btn-outline-primary btn-sm">Explore</a>
-
-                                    </div>
-
-                                </div>
-                            </div>
                         </div>
 
                     </div>
+
+                    <div className="col-md-9">
+                        <div className="hotel-list">
+                            <div className="hotel-card card mb-4">
+                                <div className="row g-0">
+                                    {/* <div className="col-md-4">
+                                        <img src="#" className="img-fluid rounded-start" alt="Hotel" />
+                                    </div> */}
+                                    <div className="col-md-8">
+                                        <div className="card-body">
+                                            {/* <h3 className="card-title">Pandawa Beach Hotel</h3> */}
+                                            <div className="d-flex justify-content-left align-items-center">
+
+                                                <table className="text-center">
+                                                    <tr>
+                                                        <td><h5>CITILINK</h5></td>
+                                                        <td><h6>14.45 <br /><b>HLP</b></h6></td>
+                                                        <td>1 Jam </td>
+                                                        <td><h6>15.45 <br /><b>HLP</b></h6></td>
+                                                        <td><b>IDR 250.000</b></td>
+                                                        <td><button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                            Select
+                                                        </button></td>
+
+                                                        {/* <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body">
+                                                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                                            </div>
+                                                        </div> */}
+                                                    </tr>
+                                                </table>
+
+                                                {/* <a className="btn btn-secondary">4.0/5</a>
+                                                <h10 className="card-text">Very Good</h10> */}
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* Add more hotel cards as needed */}
+                        </div>
+                    </div>
                 </div>
 
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
             </main>
         </div>
+        
     );
 };
 

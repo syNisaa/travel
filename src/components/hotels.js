@@ -191,6 +191,7 @@ const Hotels = () => {
             </div>
           </div>
         </div>
+        
       </main >
     </div >
   );

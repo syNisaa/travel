@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'; // Pastikan Bootstrap CSS diimpor
 import React, { useEffect, useState } from 'react';
-import pandawaBeach from '../assets/img/homescreen/pandawa-beach.png';
+import contact from '../assets/img/contact.png';
 import '../css/contact.css'; // Pastikan ini mengarah ke file CSS yang benar
 
 const Contact = () => {
@@ -24,63 +24,51 @@ const Contact = () => {
                     <span>DESTINA<span>6</span></span>
                 </div>
                 <nav className="nav-bar">
-                    <a href="/">Home</a>
+                    <a href="/homescreen">Home</a>
                     <a href="/faq">FAQ</a>
-                    <a href="/contact" className='active'><u> Contact </u></a>
+                    <a href="/contact">Contact</a>
                     <a href="/signin">Sign in</a>
                 </nav>
             </header>
 
-            <main className="container text-center mt-4">
-
-                <div className='row contact'>
-                    <div class="col-6 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <p className='paragraf'><b>CALL US</b><br /> (021)98767121351</p>
-                                <p className='paragraf'><b>LOCATION</b><br /> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
-                                <p className='paragraf'><b>EMAIL</b><br /> destinasix@destina.com</p>
-                                <p className='paragraf'><b>BUSSINESS HOURS</b><br /> 's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and s</p>
-                            </div>
-                        </div>
-                    </div>
-                    <br />
-
-
-                    <div className="col-6 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5>Contact Us </h5><hr />
-                                <div class="form-group mb-4">
-                                    <input
-                                        type="email" name="email" id="email" class="form-control" placeholder="
-                                        NAme" />
-
-                                </div><div class="form-group mb-4">
-                                    <input
-                                        type="email" name="email" id="email" class="form-control" placeholder="Email" />
-
-                                </div><div class="form-group mb-4">
-                                    <input
-                                        type="email" name="email" id="email" class="form-control" placeholder="Telphone" />
-
-                                </div>
-                                <div class="form-group mb-4">
-                                    <input
-                                        type="email" name="email" id="email" class="form-control" placeholder="Telphone" />
-                                </div>
-
-                                <div class="form-group mb-4">
-                                    <input
-                                        type="button" name="email" id="email" class="btn btn-outline-secondary" placeholder='Send'/> 
-                                </div>
-
-                            </div>
-                        </div>
+            <main className="container text-center mt-10">
+                <div className="contact">
+                    <img src={contact} alt="contact" className="img-fluid rounded-3" />
+                    <div className="form-group">
+                        <input type="text" className="form-control" placeholder="Name" />
+                        <input type="email" className="form-control" placeholder="Email" />
+                        <input type="tel" className="form-control" placeholder="Telephone" />
+                        <textarea className="form-control" placeholder="Message"></textarea>
                     </div>
                 </div>
-            </main >
-        </div >
+            </main>
+
+            <section className="services-section">
+                <h2>We Offer Best Services</h2>
+                <div className="services-container">
+                    <div className="service-box">
+                        <img src="/path/to/icon1.png" alt="Tailored itineraries" />
+                        <h3>Tailored itineraries</h3>
+                        <p>Crafted to your preferences, our custom itineraries ensure every journey aligns with your unique travel style.</p>
+                    </div>
+                    <div className="service-box">
+                        <img src="/path/to/icon2.png" alt="Expert Guides" />
+                        <h3>Expert Guides</h3>
+                        <p>Our experienced guides lead you through immersive experiences, revealing the hidden gems and local secrets of each destination.</p>
+                    </div>
+                    <div className="service-box">
+                        <img src="/path/to/icon3.png" alt="Exclusive Experiences" />
+                        <h3>Exclusive Experiences</h3>
+                        <p>Access exclusive events, private tours, and VIP treatment, creating unforgettable memories tailored just for you.</p>
+                    </div>
+                    <div className="service-box">
+                        <img src="/path/to/icon4.png" alt="Seamless Travel Planning" />
+                        <h3>Seamless Travel Planning</h3>
+                        <p>From booking flights to arranging accommodations and activities, we handle every detail so you can relax and enjoy the journey stress-free.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
     );
 };
 
