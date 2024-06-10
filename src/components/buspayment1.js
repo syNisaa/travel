@@ -82,6 +82,9 @@ const BusPayment = () => {
                                 <Button href="/buspayment2" variant="primary" block>
                                     Pay
                                 </Button>
+                                <Button className="mt-2" href="/busUser" variant="secondary" block>
+                                    Back
+                                </Button>
                             </Card.Body>
                         </Card>
                     </Col>

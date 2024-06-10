@@ -100,6 +100,9 @@ const pembayaranFlight = () => {
                                 <Button href="/pembayaranFlight2" variant="primary" block>
                                     Pay
                                 </Button>
+                                <Button className="mt-2" href="/flightUser" variant="secondary" block>
+                                    Back
+                                </Button>
                             </Card.Body>
                         </Card>
                     </Col>

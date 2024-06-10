@@ -1,10 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Pastikan Bootstrap CSS diimpor
 // import React from "react";
 import React, { useState } from "react";
-import monas from "../assets/img/destinasi/monas.jpg";
-import "../css/destinations.css"; // Pastikan ini mengarah ke file CSS yang benar
+import monas from "../../assets/img/destinasi/monas.jpg";
+import "../../css/destinations.css"; // Pastikan ini mengarah ke file CSS yang benar
 
-const Destinations = () => {
+const DetailDestinationUser = () => {
     const [priceRange, setPriceRange] = useState([0, 10000000]);
     const [filters, setFilters] = useState({
         popular: [],
@@ -58,8 +58,8 @@ const Destinations = () => {
                             </div>
 
                             <div>
-                                <a className="btn btn-primary">Search Airplane Tickets</a> 
-                                <a href="/destination" className="btn btn-outline-secondary">Back</a>
+                                <a href="/flight" className="btn btn-primary">Search Airplane Tickets</a> 
+                                <a href="/destinationUser" className="btn btn-outline-secondary">Back</a>
                             </div>
 
                         </div>
@@ -77,4 +77,4 @@ const Destinations = () => {
     );
 };
 
-export default Destinations;
+export default DetailDestinationUser;

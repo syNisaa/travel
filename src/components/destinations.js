@@ -49,7 +49,7 @@ const Destinations = () => {
             </header>
             <main className="container mt-4">
                 <div className="tab-navigation ">
-                    <a href="#" class="active navbar">Destinations</a>
+                    <a href="#" className="btn active">Destinations</a>
                     <a href="/hotel">Hotels</a>
                     <a href="/flight">Flight</a>
                     <a href="/bus">Bus</a>

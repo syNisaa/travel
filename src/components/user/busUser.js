@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Pastikan Bootstrap CSS diimpor
 import React, { useState } from "react";
-import "../css/bus.css"; // Pastikan ini mengarah ke file CSS yang benar
+import "../../css/bus.css"; // Pastikan ini mengarah ke file CSS yang benar
 
-const BUS = () => {
+const BusUser = () => {
     const [selectedDay, setSelectedDay] = useState(null);
     const [priceRange, setPriceRange] = useState([0, 10000000]);
 
@@ -36,16 +36,17 @@ const BUS = () => {
                     <a href="/">Home</a>
                     <a href="/faq">FAQ</a>
                     <a href="/contact">Contact</a>
-                    <a href="/signin">Sign in</a>
+                    <a href="/profile">My Profile</a>
                 </nav>
             </header>
 
             <main className="container text-center mt-4">
                 <div className="tab-navigation">
-                    <a href="/destination">Destinations</a>
-                    <a href="/hotel">Hotels</a>
-                    <a href="/flight">Flight</a>
-                    <a href="/bus" className="btn active">Bus</a>
+                    <a href="/destinationUser">Destinations</a>
+                    <a href="/hotelUser">Hotels</a>
+                    <a href="/flightUser">Flight</a>
+                    <a href="/busUser" className="btn active">Bus</a>
+                    <a href="/history" >History</a>
                 </div>
                 <div className="search-form">
                     <input type="text" placeholder="Destination" className="form-control me-2" />
@@ -130,7 +131,7 @@ const BUS = () => {
                                         <p>Keberangkatan {bus.time}</p>
                                         <p>IDR {bus.price.toLocaleString()}</p>
                                     </div>
-                                    <a href="/buspayment1" type="button" className="btn btn-primary btn-sm">
+                                    <a href="/buspayment" type="button" className="btn btn-primary btn-sm">
                                         Book
                                     </a>
                                     {/* <button href="/payment" className="btn btn-primary">
@@ -146,4 +147,4 @@ const BUS = () => {
     );
 };
 
-export default BUS;
+export default BusUser;

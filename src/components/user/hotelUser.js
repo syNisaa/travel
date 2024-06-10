@@ -1,11 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Pastikan Bootstrap CSS diimpor
 // import React from "react";
 // import pandawaBeach from "../assets/img/homescreen/pandawa-beach.png";
-import hotel1 from "../assets/img/hotels/hotel-1.jpeg";
-import "../css/hotels.css"; // Pastikan ini mengarah ke file CSS yang benar
+import hotel1 from "../../assets/img/hotels/hotel-1.jpeg";
+import "../../css/hotels.css"; // Pastikan ini mengarah ke file CSS yang benar
 import React, { useState } from "react";
 
-const Hotels = () => {
+const HotelsUser = () => {
   const [priceRange, setPriceRange] = useState([0, 10000000]);
   const [setFilters] = useState({
     popular: [],
@@ -45,16 +45,17 @@ const Hotels = () => {
           <a href="/">Home</a>
           <a href="/faq">FAQ</a>
           <a href="/contact">Contact</a>
-          <a href="/signin">Sign in</a>
+          <a href="/profile">My Profile</a>
         </nav>
       </header>
 
       <main className="container mt-4">
         <div className="tab-navigation ">
-          <a href="/destination">Destinations</a>
-          <a href="/hotel" className="btn active">Hotels</a>
-          <a href="/flight">Flight</a>
-          <a href="/bus">Bus</a>
+          <a href="/destinationUser">Destinations</a>
+          <a href="/hotelUser" className="btn active">Hotels</a>
+          <a href="/flightUser">Flight</a>
+          <a href="/busUser">Bus</a>
+          <a href="/history">History</a>
         </div>
 
         <div className="search-form mb-4">
@@ -197,4 +198,4 @@ const Hotels = () => {
   );
 };
 
-export default Hotels;
+export default HotelsUser;

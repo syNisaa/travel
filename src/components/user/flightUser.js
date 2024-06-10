@@ -1,10 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Pastikan Bootstrap CSS diimpor
 // import React from "react";
 import React, { useState } from "react";
-import monas from "../assets/img/destinasi/monas.jpg";
-import "../css/flights.css"; // Pastikan ini mengarah ke file CSS yang benar
+import monas from "../../assets/img/destinasi/monas.jpg";
+import "../../css/flights.css"; // Pastikan ini mengarah ke file CSS yang benar
 
-const Flights = () => {
+const FlightsUser = () => {
     const [priceRange, setPriceRange] = useState([0, 10000000]);
     const [filters, setFilters] = useState({
         popular: [],
@@ -44,21 +44,23 @@ const Flights = () => {
                     <a href="/">Home</a>
                     <a href="/faq">FAQ</a>
                     <a href="/contact">Contact</a>
-                    <a href="/signin">Sign in</a>
+                    <a href="/profile">My Profile</a>
                 </nav>
             </header>
             <main className="container mt-4">
                 <div className="tab-navigation ">
-                    <a href="/destination" >Destinations</a>
-                    <a href="/hotel">Hotels</a>
-                    <a href="/flight" className="btn active">Flight</a>
-                    <a href="/bus">Bus</a>
+                    <a href="/destinationUser" >Destinations</a>
+                    <a href="/hotelUser">Hotels</a>
+                    <a href="/flightUser" className="btn active">Flight</a>
+                    <a href="/busUser">Bus</a>
+                    <a href="/history">History</a>
                 </div>
                 <div className="search-form mb-4">
                     <input type="text" placeholder="Destination" className="form-control me-2" />
                     <input type="date" className="form-control me-2" />
                     <input type="date" className="form-control me-2" />
                     <input type="text" placeholder="1 room, 2 adults, 0 children" className="form-control me-2" />
+
                     <button class="btn btn-primary">Search</button>
                 </div>
 
@@ -128,9 +130,7 @@ const Flights = () => {
                                                         <td>1 Jam </td>
                                                         <td><h6>15.45 <br /><b>HLP</b></h6></td>
                                                         <td><b>IDR 250.000</b></td>
-                                                        <td><button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                            Select
-                                                        </button></td>
+                                                        <td><a href="/pembayaranflight" className="btn btn-primary"> Select </a></td>
 
                                                         {/* <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                             <div class="accordion-body">
@@ -163,4 +163,4 @@ const Flights = () => {
     );
 };
 
-export default Flights;
+export default FlightsUser;

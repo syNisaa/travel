@@ -44,15 +44,16 @@ const Destinations = () => {
                     <a href="/">Home</a>
                     <a href="/faq">FAQ</a>
                     <a href="/contact">Contact</a>
-                    <a href="/signin">Sign in</a>
+                    <a href="/profile">My Profile</a>
                 </nav>
             </header>
             <main className="container mt-4">
                 <div className="tab-navigation ">
                     <a href="#" class="btn active">Destinations</a>
-                    <a href="/hotel">Hotels</a>
-                    <a href="/flight">Flight</a>
-                    <a href="/bus">Bus</a>
+                    <a href="/hotelUser">Hotels</a>
+                    <a href="/flightUser">Flight</a>
+                    <a href="/busUser">Bus</a>
+                    <a href="/history" className="btn active">History</a>
                 </div>
                 <div className="search-form mb-4">
                     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Search Destination" />
@@ -94,7 +95,7 @@ const Destinations = () => {
                                         <small><i class="fa-solid fa-location-dot"></i>Jakarta, Indonesia </small>
                                         <p className="paragraf">The National Monument or what is abbreviated as Monas or Tugu Monas is a 132 meter (433 foot) high memorial monument located right in the middle of Medan Merdeka Square, Central Jakarta. Monas was established to commemorate the resistance and struggle of the Indonesian people in gaining independence from the colonial government of the Dutch Kingdom.<br />
                                         </p>
-                                        <a href="/detailDestination" type="button" className="btn btn-outline-primary btn-sm">Explore</a>
+                                        <a href="/detailDestinationUser" type="button" className="btn btn-outline-primary btn-sm">Explore</a>
 
                                     </div>
                                     
@@ -150,7 +151,7 @@ const Destinations = () => {
                                         <small>Jakarta, Indonesia </small>
                                         <p className="paragraf">Ancol Dreamland is Jakarta's premier recreational complex, located along the waterfront. It includes Dunia Fantasi, an amusement park with thrilling rides and attractions themed around various cultures. Sea World offers an impressive aquarium showcasing marine life, while Atlantis Water Adventure features pools and slides for all ages. The Ancol complex also includes art markets, an eco-park, and numerous dining options, making it a perfect family destination.<br />
                                         </p>
-                                        <a href="#" type="button" className="btn btn-outline-primary btn-sm">Explore</a>
+                                        <a href="" type="button" className="btn btn-outline-primary btn-sm">Explore</a>
 
                                     </div>
                                     

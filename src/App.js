@@ -17,11 +17,16 @@ import Bus from "./components/bus";
 // User
 import HomeUser from "./components/user/home"; 
 import DestinationUser from "./components/user/destinationUser";
+import DetailDestinationUser from "./components/user/detailDestinationUser";
 import Pembayaranflight from "./components/user/pembayaranflight";
 import Pembayaran from "./components/user/pembayaranflight2";
 import History from "./components/user/history";
 import BusPayment from "./components/buspayment1"; 
 import Payment from "./components/buspayment2"; 
+import HotelsUser from "./components/user/hotelUser";
+import FlightsUser from "./components/user/flightUser";
+import BusUser from "./components/user/busUser";
+import Profile from "./components/user/profile";
 
 
 function App() {
@@ -43,11 +48,13 @@ function App() {
 
       {/* User */}
       <Route path="/homeUser" element={<HomeUser/>} />
-      <Route path="/destinationUser" element={<Destination/>} />
-      <Route path="/detailDestinationUser" element={<DetailDestination/>} />
-      <Route path="/hotelUser" element={<Hotels/>} />
-      <Route path="/flightUser" element={<Flights/>} />
-      <Route path="/history" element={<Flights/>} />
+      <Route path="/destinationUser" element={<DestinationUser/>} />
+      <Route path="/detailDestinationUser" element={<DetailDestinationUser/>} />
+      <Route path="/hotelUser" element={<HotelsUser/>} />
+      <Route path="/flightUser" element={<FlightsUser/>} />
+      <Route path="/busUser" element={<BusUser/>} />
+      <Route path="/history" element={<History/>} />
+      <Route path="/profile" element={<Profile/>} />
 
       <Route path="/pembayaranFlight" element={<Pembayaranflight/>} />
       <Route path="/pembayaranFlight2" element={<Pembayaran/>} />
